@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReciboFias" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="57783f6a-7f50-48d7-8499-7fd714f9d37e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion FIAR"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="214"/>
+	<parameter name="folio" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from fias where folio =  $P{folio}]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="folio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="folio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="rfc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="rfc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="capital" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="capital"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="plazo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="plazo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechadeposito" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechadeposito"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechavencimiento" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechavencimiento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="interes" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="interes"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="total" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="renovacion" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="renovacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="numeroquincena" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numeroquincena"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechacreacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechacreacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="tasainteres" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tasainteres"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="referencia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="referencia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="provision" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="provision"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="saldo" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="saldo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="sancion" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="sancion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="qnapago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qnapago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechapago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fechapago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="qnacancelacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qnacancelacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechacancelacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fechacancelacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="retirointeres" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="retirointeres"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="montoretiro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="montoretiro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="montoabono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="montoabono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="statusinversion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="statusinversion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="usuarioalta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuarioalta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="usuariopago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuariopago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="usuariocancelacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuariocancelacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="131" splitType="Stretch">
+			<staticText>
+				<reportElement x="7" y="80" width="541" height="20" uuid="985808d8-5676-4cd6-9cc3-157f7ee781a6"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADMINISTRADORES Y CONSULTORES EN PREVISION SOCIAL S.A. DE C.V.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="111" width="241" height="20" uuid="923c4539-364a-4b36-8740-bd66a36ad8d1"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECIBO DE PAGO INVERSION FIAS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="439" y="15" width="109" height="49" uuid="81802dfd-5d29-48d8-973b-3f9ec816306d"/>
+				<imageExpression><![CDATA["Fiarlogo.JPG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="10" y="7" width="105" height="57" uuid="99976794-7b74-49d8-b4a7-26567da9c9b1"/>
+				<imageExpression><![CDATA["Sutcobach.JPG"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="444" y="111" width="100" height="20" uuid="c9a16633-f67a-41bc-97f9-98d550669528"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{folio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="645" splitType="Stretch">
+			<staticText>
+				<reportElement x="-3" y="60" width="551" height="81" uuid="c6e840c6-86fb-454b-bb03-ca569674084b"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Por medio de la presente hago constar que retiro de manera voluntaria del Programa del Fondo de Inversión de ahorro social (FIAS)  la cantidad que previamente invertí mas los intereses generados por dicha inversión, recibiendo en esta fecha a mi entera satisfacción, la cantidad de:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="190" width="170" height="20" uuid="f48e8b6b-b4e5-4bb5-9d51-a2511b8a24eb"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Concepto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="190" width="100" height="20" uuid="05dab620-e59a-4136-b743-c655aed5c9ef"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Importe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="255" width="170" height="20" uuid="7ab3df2f-2d4f-4f5f-9c5e-09a4cf02bb6c"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(-) Retiro]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="450" width="430" height="30" uuid="03959011-61b6-454d-9470-4dd219c2045c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="150" y="480" width="211" height="31" uuid="b400137a-89e0-4b4a-863d-469322f7db21"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECIBI]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="457" y="540" width="100" height="30" uuid="01c93de6-5458-4e57-90ab-bef03a2b7d05"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="540" width="154" height="30" uuid="cd86848f-6d3c-4ca9-a9c7-ad66f126d66c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chilpancingo,Guerrero A ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="590" width="541" height="1" uuid="966ff92d-92a4-4a50-bca9-37be051dd2dc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="20" y="600" width="121" height="31" uuid="f2f1647e-99cd-4dbd-8e33-d71da670ca2f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CCP. ARCHIVO]]></text>
+			</staticText>
+			<textField pattern="#,##0.00">
+				<reportElement x="315" y="255" width="100" height="20" uuid="055afc54-fe68-4f76-951c-ee34b9393592"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montoretiro}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MandatoDescto" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1f1f8295-457b-4dc4-8120-56bdbe5542a5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion FIAR"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM prestamos
+WHERE 
+	 prestamos.folio  =  $P{Parameter1}]]>
+	</queryString>
+	<field name="saldo" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="saldo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="abonoparcial" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="abonoparcial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="rfc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="rfc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="plantel" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="plantel"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="numeroempleado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numeroempleado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="folio" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="folio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="puesto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="puesto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="numcheque" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="numcheque"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="plazo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="plazo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="monto" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="monto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="interes" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="interes"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="descuento" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="descuento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="nombreaval" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombreaval"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="rfcaval" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="rfcaval"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="qna" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="qnadescuento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qnadescuento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="fechacreacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechacreacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="fechacancelacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechacancelacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="fechareactivacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechareactivacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="interesanual" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="interesanual"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="total" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="sueldo" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="sueldo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="fondo_garantia" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="fondo_garantia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="domicilio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="domicilio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="sumaindebido" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="sumaindebido"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="observaciones" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="observaciones"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="region" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="region"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="clabe" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="clabe"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="transferencia" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="transferencia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="qnacancelacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qnacancelacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="qnareactivacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qnareactivacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="usuariocancelacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuariocancelacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="usuarioactivacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuarioactivacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="usuarioalta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuarioalta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="fechamodificacion" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="fechamodificacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="-10" width="441" height="30" uuid="d479d01d-f03e-457d-844f-c04675f334a0"/>
+				<textElement textAlignment="Center">
+					<font size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MANDATO DE DESCUENTO IRREVOCABLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="13" width="396" height="17" uuid="c20c723e-5d13-486c-8df3-61cf18376637"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMITE TECNICO DEL FONDO DE INVERSION DE AHORRO PARA EL RETIRO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="30" width="550" height="18" uuid="c0c3d7f8-ee42-4fcb-ba22-e77644d2e578"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.75" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FONDO DE GARANTIA DEL FONSAR]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="-10" width="81" height="69" uuid="7e661653-bd3f-470c-90e1-929ecbf96d7f"/>
+				<imageExpression><![CDATA["Sutcobach32.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="483" y="0" width="89" height="29" uuid="2f1760d3-07cb-4fae-b642-6ad490bad5d8"/>
+				<imageExpression><![CDATA["FGFONSAR.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="18" y="52" width="550" height="18" uuid="9068fe3d-280c-458a-b1da-955035d5837e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.75" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS GENERALES DEL ACREDITADO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="70" height="20" uuid="632c142f-d2e3-4ade-bff0-3f3167f3eb72"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="30" width="70" height="20" uuid="1066843b-f055-40d1-96a8-53919964c56e"/>
+				<text><![CDATA[Domicilio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="70" height="20" uuid="71677eb7-bf48-4071-9196-ceec0f4e7a4c"/>
+				<text><![CDATA[Rfc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="30" width="70" height="20" uuid="122f6442-79fd-4ae1-9ece-53b9baa5213f"/>
+				<text><![CDATA[Puesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="60" width="70" height="20" uuid="d8860894-e532-43bd-8093-74818f5fba56"/>
+				<text><![CDATA[Sueldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="60" width="70" height="20" uuid="7e3c2055-a1ef-4532-94e4-2c8e4c18ff23"/>
+				<text><![CDATA[Plantel]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="0" width="160" height="20" uuid="39457fd1-f800-47d5-8fc0-7ad2b7f5786b"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="40770d2f-e812-4e79-ae99-90fd8e1fca8b"/>
+				<textFieldExpression><![CDATA[$F{rfc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="30" width="160" height="20" uuid="c59605e5-8cec-485b-b4c3-3250fcf9820f"/>
+				<textFieldExpression><![CDATA[$F{domicilio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="60" width="159" height="20" uuid="ffa69660-c045-4423-82f4-9eaac91dbe0a"/>
+				<textFieldExpression><![CDATA[$F{plantel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="30" width="100" height="20" uuid="5edc12ec-00fc-463e-8544-d168fd68feea"/>
+				<textFieldExpression><![CDATA[$F{puesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="60" width="100" height="20" uuid="49fb7e21-2aca-44dd-9ab8-69b329c43e3b"/>
+				<textFieldExpression><![CDATA[$F{sueldo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="473" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="40" width="70" height="20" uuid="9047d0f2-fe11-429c-bfb6-d6ee1ae8cfbe"/>
+				<text><![CDATA[Folio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="70" width="70" height="20" uuid="b5133037-cc5a-4de6-85f6-335bc7cc365c"/>
+				<text><![CDATA[Plazo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="100" width="70" height="20" uuid="81dfc8d1-7658-4e5a-8907-2920b1b171e2"/>
+				<text><![CDATA[Tasa Anual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="40" width="90" height="20" uuid="da4b3203-72a9-4fae-80ed-0107ee544321"/>
+				<text><![CDATA[Transferencia por: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="70" width="90" height="20" uuid="49505b13-80ee-4596-ba5d-094fe6970198"/>
+				<text><![CDATA[Fondo de Garantia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="100" width="70" height="20" uuid="0bfe4c4c-8f1d-432a-a6ed-b2eb08f39d06"/>
+				<text><![CDATA[Monto por]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="40" width="80" height="20" uuid="7dfb5234-809f-4d12-a6bf-7a41d5d07669"/>
+				<text><![CDATA[Interes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="70" width="80" height="20" uuid="ec6646f2-7601-4ea6-8589-3f91c5573855"/>
+				<text><![CDATA[Total a Pagar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="100" width="80" height="20" uuid="0e3cab1e-28d6-46cb-9675-3b3448259f10"/>
+				<text><![CDATA[Descuento Qnal :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="550" height="29" uuid="5cbe7ada-3d0a-44b2-a9bb-0ec61b6a9bd8"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.75" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[DATOS DE LA LIQUIDACION DEL PRESTAMO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="571" height="20" uuid="40011923-2414-495a-91f6-c148ee73b626"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.75"/>
+					<bottomPen lineWidth="1.75" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[FONDO DE GARANTIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="150" width="568" height="30" uuid="f5b4404a-4b94-4a95-b27f-fa8a8b4b4c5a"/>
+				<textElement textAlignment="Justified">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[FONDO DE GARANTIA SERVIRA PARA ASEGURAR LA RECUPERACIÓN DE LOS CREDITOS EN CASO DE INCUMPLIMIENTO O FALLECIMIENTO DE LOS ACREEDORES A CRÉDITOS, SIENDO ESTE POR UN 2% SOBRE EL MONTO SOLICITADO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="180" width="571" height="20" uuid="20963873-d28f-438c-86df-ce473e23e6df"/>
+				<box>
+					<topPen lineWidth="1.75" lineStyle="Dashed"/>
+					<bottomPen lineWidth="1.75" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[CONSENTIMIENTO DE DESCUENTO VÍA NOMINA  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="350" width="570" height="20" uuid="08c6baf7-7ced-465c-af87-4e1340b13bc9"/>
+				<box>
+					<topPen lineWidth="1.75" lineStyle="Dashed"/>
+					<bottomPen lineWidth="1.75" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[PAGARÉ ÚNICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="380" width="100" height="20" uuid="e17646ba-43dd-4893-aeba-f5ecda550c57"/>
+				<text><![CDATA[MONTO LETRAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="380" width="70" height="22" uuid="2ffd74fd-bf82-44f8-9677-aa5811d2fa54"/>
+				<text><![CDATA[BUENO  POR:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="40" width="80" height="20" uuid="001f30fa-ab31-47af-9781-cdb188554be3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="518ce705-f10d-4672-a555-32ef9c473a65"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{folio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="70" width="80" height="20" uuid="768825ec-10da-40f7-8785-c9b80939720a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9e75ef85-9845-465c-bc79-885627044f4a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{plazo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="100" width="80" height="20" uuid="19b655f4-1f6e-4c78-a1f4-507d08b5bfbd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e90373fc-69b4-4a8b-b662-188ee6580b9a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{interesanual}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="310" y="70" width="90" height="20" uuid="7d1ae3d1-17b1-422c-9f29-03dd75fb918e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="38295c9b-5cb8-4097-b337-29dc04888f8e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fondo_garantia}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="310" y="100" width="90" height="20" uuid="830f0a84-0925-47c4-96c2-a396e439462d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="43759182-7108-456d-8605-eaa5b8a59342"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="492" y="70" width="78" height="20" uuid="4aacd561-7f14-4e22-9076-93f5e4edfa13">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="68a13a45-fba3-487e-96f7-7c7e8962d939"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="500" y="40" width="70" height="20" uuid="04f22e8a-1bec-403a-ad90-f9990e7bcbab">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="255758ae-946b-45e4-9aa2-1b6542980e3e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{interes}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="491" y="100" width="80" height="20" uuid="3aac65a8-3078-4783-bcb6-72358601d3c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b41fcb30-919f-4158-bf93-73eaa6f03a24"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descuento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="310" y="40" width="80" height="20" uuid="35ec5e35-fc13-4d2e-9e00-ae699eb912a9"/>
+				<textFieldExpression><![CDATA[$F{monto}-$F{fondo_garantia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="210" width="567" height="130" uuid="ee50c287-18ee-4e3c-a17a-203d3e3fe797"/>
+				<textElement textAlignment="Justified">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["POR MEDIO DEL PRESENTE Y ESTANDO DE ACUERDO CON LOS DATOS DEL PRÉSTAMO ARRIBA MENCIONADO YO C:  " + $F{nombre} + "  DOY MI MAS AMPLIO CONSENTIMIENTO PARA QUE SE ME APLIQUEN VIA NÓMINA LOS DESCUENTOS QUINCENALES QUE SEAN NECESARIOS HASTA LA LIQUIDACION DEL PRESTAMO, CUYO IMPORTE TOTAL CORRESPONDE A LA CANTIDAD DE:   " + $F{total} + "  MISMO QUE SOLICITE AL FONDO DE GARANTIA DEL FONSAR.EN EL PRESENTE CONSENTIMIENTO AUTORIZO QUE SE ME HAGA EL DESCUENTO AUN CUANDO REBASE EL TOPE DEL 30% ESTABLECIDO POR LA L.F.T. EN CASO DE SEPARARME DE MI PLAZA ACTUAL AUTORIZO A COLEGIO DE BACHILLERES DEL ESTADODE GUERRERO PARA DESCONTAR DE MI LIQUIDACION O FINIQUITO, EL SALDO QUE ADEUDE, SI ESTE MONTO NO CUBRE EL TOTAL DEL ADEUDO ME COMPROMETO A HACER PUNTUALMENTE MIS PAGOS A LA CUENTA 65-507584416-5 DEL BANCO SANTANDER CON CLABE INTERBANCARIA 014260655075841653 A NOMBRE DEL SINDICATO UNICO DE TRAB. DEL COBACH GUERRERO COMITÉ TÉCNICO, EN CASO CONTRARIO CAUSARA INTERES MORATORIO AL TIPO DEL 3 % MENSUAL, MÁS LOS GASTOS QUE POR ELLO SE ORIGINEN."]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="380" y="381" width="90" height="20" uuid="f7103e4f-c32c-4b96-81f1-9741fceb4297">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="43759182-7108-456d-8605-eaa5b8a59342"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="410" width="568" height="59" uuid="10393360-05c9-4a39-971b-d7a48407f228"/>
+				<textElement textAlignment="Justified">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DEBE(MOS) Y PAGARE(MOS) INCONDICIONALMENTE POR ESTE PAGARÉ A LA ORDEN DEL SUTCOBACH O A QUIEN LO SUSTITUYA O A QUIEN DESIGNE EL COMITÉ TÉCNICO DEL FONDO DE INVERSIÓN DE AHORRO PARA EL RETIRO EN CHILPANCINGO,GRO. LA CANTIDAD DE:  " + $F{total} + "  VALOR RECIBIDO A MI(NUESTRA) ENTERA SATISFACCIÓN.ESTE PAGARÉ ES ÚNICO Y ESTA SUJETO A LA CONDICION DE QUE AL NO PAGARSE A SU VENCIMIENTO SERÁ EXIGIBLE EL CAPITAL MÁS LOS INTERESES MORATORIOS AL TIPO DEL 3 % MENSUAL MÁS LOS GASTOS QUE POR ELLO SE ORIGINEN"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="10" width="81" height="21" uuid="900e0275-6315-49c2-a578-ab6a34d3227d"/>
+				<text><![CDATA[DEUDOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="36" width="83" height="21" uuid="345c4235-b317-46b8-afa7-2c666fe6a06d"/>
+				<text><![CDATA[NOMBRE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="180" height="21" uuid="efa22eb5-1bfd-47f3-bdb0-5a83f5d2efd0"/>
+				<text><![CDATA[FIRMA________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="10" width="81" height="16" uuid="add35de6-6d62-4216-b603-8d4a652f8a7e"/>
+				<text><![CDATA[AVAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="30" width="83" height="19" uuid="472be28f-5ad4-45cd-8551-7307222ef93e"/>
+				<text><![CDATA[NOMBRE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="50" width="180" height="21" uuid="d9e5b912-8386-42ac-95d8-5a567ae160e8"/>
+				<text><![CDATA[FIRMA________________________]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="71" width="100" height="20" uuid="ecef671b-e472-473a-9b09-80a0772dfab7"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="83" width="100" height="20" uuid="0860712f-11d7-4137-ab0d-a3dee18f1268"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

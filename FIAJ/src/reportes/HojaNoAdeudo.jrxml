@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HojaNoAdeudo" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3134415c-3888-4025-8217-b71f3e2bfa77">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion FIAR"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select   *  from prestamos where rfc = $P{Parameter1}]]>
+	</queryString>
+	<field name="rfc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="rfc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prestamos"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="521" height="21" uuid="cebc747e-3f60-458b-9862-94dc6a12fb31"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ADMINISTRADORES Y CONSULTORES EN PREVISION SOCIAL S.A. DE C.V.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="40" width="521" height="21" uuid="ef0f2af5-1280-4509-9b2b-1dfafd66a1f3"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[CONSTANCIA DE NO ADEUDO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="488" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="50" width="570" height="79" uuid="3aed8589-a67a-4031-a88b-6f6c60d43d99"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[POR ESTE MEDIO LA CONSULTORA ADMINISTRADORES Y CONSULTORES EN PREVISION SOCIAL S.A DE C.V. (SEFI) A TRAVÉS DEL COMITÉ TÉCNICO DEL PROGRAMA DE PREVISION SOCIAL, HACE CONSTAR QUE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="210" width="570" height="40" uuid="b8813253-64ab-43d8-b558-fa49bd742036"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[NO PRESENTA A LA FECHA NINGÚN ADEUDO AL PROGRAMA, POR LO QUE SE EXTIENDE LA PRESENTE PARA LOS USOS LEGALES A QUE HAYA LUGAR.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="350" width="341" height="31" uuid="28264694-c23c-4b83-87c0-4100182d44fe"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CP. JOSE EDUARDO GUTIERREZ FRAGOSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="390" width="223" height="18" uuid="cfd8d69b-9477-4729-81a3-6a91c044a354"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ATENTAMENTE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="161" width="531" height="21" uuid="34e5d84e-9815-4f80-aed8-09332c91f553"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="16" width="140" height="21" uuid="ee1a4121-4af3-4d0c-9b7f-30b262a13768"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CCP. ARCHIVO]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="410" y="15" width="160" height="21" uuid="731e2e76-b747-411c-aaea-4d1a5218f97e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="11" width="110" height="25" uuid="6f6f81cf-5b18-4436-bb4a-ad5dbdbf6d64"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

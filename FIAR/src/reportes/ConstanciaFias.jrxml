@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ConstanciaFias" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ec962677-7449-4f6c-a204-b5db113fa5f9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="fiar"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="Dataset1" uuid="c6687bbd-26d5-436c-808a-3b594ec6c433">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<subDataset name="Dataset2" uuid="7d77930d-d7ef-42be-87e7-342b03a2b21c">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from fias where folio = $P{Parameter1}]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="folio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="folio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="rfc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="rfc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="capital" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="capital"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="plazo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="plazo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechadeposito" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechadeposito"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechavencimiento" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechavencimiento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="interes" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="interes"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="total" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="renovacion" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="renovacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="numeroquincena" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numeroquincena"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechacreacion" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fechacreacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="tasainteres" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tasainteres"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="referencia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="referencia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="provision" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="provision"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="saldo" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="saldo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="sancion" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="sancion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="qnapago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qnapago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechapago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fechapago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="qnacancelacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qnacancelacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="fechacancelacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fechacancelacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="retirointeres" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="retirointeres"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="montoretiro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="montoretiro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="montoabono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="montoabono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="statusinversion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="statusinversion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="usuarioalta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuarioalta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="usuariopago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuariopago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<field name="usuariocancelacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuariocancelacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fias"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="0" width="280" height="20" uuid="ccc27de8-218e-4ae2-963d-edea48c45d94"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FONDO DE INVERSION DE AHORRO SOCIAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="29" width="280" height="20" uuid="8154f893-a8c9-4064-a04e-cb2d07c5e9f2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONSTANCIA DE AHORRO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="5" y="10" width="155" height="49" uuid="f30c3b31-df7d-44d5-89f4-1058036f0c33"/>
+				<imageExpression><![CDATA["Fiarlogo.JPG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="457" y="0" width="110" height="79" uuid="df4590b3-1fed-47c7-94be-4ff981d9f716"/>
+				<imageExpression><![CDATA["Sefi.JPG"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="655" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="10" width="562" height="31" uuid="5c37c361-3f21-4de5-847b-dc6b92408514"/>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTA CONSTANCIA DE AHORRO REPRESENTA UNA OBLIGACIÓN PARA EL SINDICATO UNICO DE TRABAJADORES DEL COLEGIO DE BACHILLERES DEL ESTADO DE GUERRERO A PAGAR A:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="50" width="100" height="30" uuid="f0c05068-884e-49dd-8eaa-e4b6a7613af9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{folio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="90" width="562" height="40" uuid="a62868c6-8fd5-4bd1-a3f3-9aef40b0b94c"/>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EL MONTO A RECIBIR A SU FECHA DE VENCIMIENTO QUE ESTABLECE EL PRESENTE DOCUMENTO. ESTE SOLO PODRÁ SER COBRADO POR EL SOCIO AHORRADOR O EN CASO DE FALLECER, LO PODRA(N) COBRAR EL (LOS) BENEFICIARIOS QUE HAYA DESIGNADO EL SOCIO AHORRADO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="140" width="100" height="30" uuid="25527024-75d9-41ff-bbec-c5fc593f26d7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechadeposito}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="140" width="100" height="30" uuid="ad2a23c0-5544-4fbf-b8b4-b0f4daecec29"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechavencimiento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="140" width="100" height="30" uuid="d8fcb91a-076d-466c-90f8-cc9c8ca0f07f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Deposito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="140" width="100" height="30" uuid="352f3976-522f-4cf7-893d-6514c787c18a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Vencimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="190" width="140" height="30" uuid="b6ae4859-8f07-4857-9a73-b7a7f018b708"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="190" width="50" height="30" uuid="e61be066-755f-49bc-ae3e-480729d69028"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Capital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="190" width="50" height="30" uuid="bb30f6f0-fc52-453d-b990-e5aba8744210"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plazo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="190" width="50" height="30" uuid="a2ac7756-c2c1-4618-b299-d8a50d636032"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tasa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="190" width="50" height="30" uuid="8bfbffb4-4ec8-48e0-8dd8-11748eb3af19"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="190" width="80" height="30" uuid="68742e8e-64b8-4508-91d1-d00ee1d2c452"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monto A Recibir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="512" y="190" width="50" height="30" uuid="f1f75877-3aed-45a2-adac-7b31c55aa489"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Folio]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="230" width="140" height="30" uuid="3370c324-73b2-4ed9-979c-e54ab30c8c74"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00-)">
+				<reportElement x="170" y="230" width="50" height="30" uuid="de18bce5-05bb-4cb9-aa14-d760d6f31aed"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{capital}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="230" width="50" height="30" uuid="40eb98db-9d69-4e00-bf7b-ddc7f5ede16e"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{plazo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="230" width="50" height="30" uuid="b6c2d73a-4d9a-4832-9811-4c7c77368454"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tasainteres}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="360" y="230" width="50" height="30" uuid="3e21a2a7-56a2-4b55-970d-72c5b0f43273"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{interes}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="420" y="230" width="80" height="30" uuid="8325cd5d-98df-46f4-982c-34230262f1de"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="230" width="50" height="30" uuid="1b7f4230-7009-4e3b-9e65-52a6c5c2c10d"/>
+				<box leftPadding="0">
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{folio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="310" width="170" height="30" uuid="fa08e5ab-c140-4e8a-9971-0de0280194a0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma Del Socio Ahorrado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="330" width="220" height="30" uuid="332994e2-b75b-4fb4-8357-3c385df7f8b2"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTE DOCUMENTO NO SERA VALIDO SIN El SELLO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="360" width="567" height="40" uuid="c8fb2e7d-95ca-402b-bc60-de68ac69d664"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRO COMO BENEFICIARIOS DEL FONDO DE INVERSION DE AHORRO SOCIAL, EN CASO DE MI FALLECIMIENTO A LOS QUE RELACIONO A CONTINUACION  (SE RECOMIENDA QUE SEAN MAYORES DE EDAD.) EL SOCIO AHORRADOR DEBE ANOTAR DE SU PUÑO Y LETRA A LOS BENEFICIARIOS.]]></text>
+			</staticText>
+			<rectangle radius="4">
+				<reportElement x="34" y="410" width="526" height="225" uuid="9872964d-964b-468b-992c-875bb673e91c"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="34" y="454" width="526" height="1" uuid="7105273b-bd35-4f34-9352-1519679783a7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="34" y="530" width="526" height="1" uuid="c7de4e28-abe1-4728-b9a0-beb3475e3c4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="34" y="492" width="526" height="1" uuid="368a3855-1786-47f7-a57d-11e26626c667">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="34" y="568" width="526" height="1" uuid="dbc17ad7-403e-4dee-baa1-9aa72539c62e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="34" y="606" width="526" height="1" uuid="42b92349-9330-43f2-9735-c572ec6baa75">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="245" y="410" width="1" height="225" uuid="a6579ccd-de8c-4eb3-81f2-498a71f8c950">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="457" y="410" width="1" height="225" uuid="77207d9f-9e43-49d2-b2c5-b4dfde810ce4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="351" y="410" width="1" height="225" uuid="40d68b08-bca6-49dc-a6a9-0573999bb495">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="50" width="100" height="20" uuid="6b7b1473-3096-4210-981a-5eda2b1558d0"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOLIO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="420" width="161" height="21" uuid="4bf0fa94-c962-4bc8-8c31-0bf453f8c72c"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="420" width="101" height="21" uuid="34b10b57-38ca-4e0f-9aea-46ab4af3e3eb"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARENTESCO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="420" width="101" height="21" uuid="47f78103-a804-4f3f-a9ea-73b8b3897397"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA NAC.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="457" y="420" width="101" height="21" uuid="16b9053a-180b-4a25-8c29-863267609706"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PORCENTAJE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="221" y="50" width="341" height="30" uuid="9c1868fe-dc88-4f9b-94a7-cb71318a2a69"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="13" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

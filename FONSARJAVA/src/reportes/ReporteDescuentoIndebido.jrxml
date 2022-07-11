@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteDescuentoIndebido" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4674a723-186d-44a5-a971-f013ed81c9e1">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion FIAR"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="555"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="431"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="331"/>
+	<parameter name="Id" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from qnarecuperacionrecuperada where id = $P{Id}]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="rfc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="rfc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="plantel" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="plantel"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="folio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="folio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="abono" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="abono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="numeroquincena" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numeroquincena"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="movimiento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="movimiento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="saldo" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="saldo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="interes" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="interes"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="numeropago" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numeropago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="capital" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="capital"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="numeroempleado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numeroempleado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="fechaabono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fechaabono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="usuariomovimiento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuariomovimiento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<field name="fechamodificacion" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="fechamodificacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnarecuperacionrecuperada"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="177" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="90" width="534" height="31" uuid="c6eefa8f-88eb-4b2e-8d3b-0b38d844791b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADMINISTRADORES Y CONSULTORES EN PREVISION SOCIAL S.A. DE C.V.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="140" width="191" height="30" uuid="72622c06-6540-4ce1-bcb8-1cc27274f37c"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RECIBO:DESCUENTO INDEBIDO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="14" width="90" height="70" uuid="78a548b3-ada3-4d5e-a8f0-36e53992eac6"/>
+				<imageExpression><![CDATA["Fiarlogo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="406" y="14" width="136" height="56" uuid="fba274fb-cb04-4542-9119-78b9ac9ed8b4"/>
+				<imageExpression><![CDATA["fonsarlogo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="624">
+			<staticText>
+				<reportElement x="10" y="203" width="120" height="31" uuid="3a59aa0e-cb76-4e22-9241-7e6cea35ad50"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[FOLIO FONSAR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="240" width="120" height="31" uuid="c5b93f89-04c7-42f2-b680-2bdec0dfb77f"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[MONTO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="152" y="203" width="100" height="30" uuid="ada0ded2-66ef-42b6-9ed9-e46c432b5ba4"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{folio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="240" width="101" height="31" uuid="531a51c2-51dc-49fe-8478-f817922859c4"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{abono}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="400" width="310" height="41" uuid="f3684ab1-544d-469f-944b-8585c2713ae5"/>
+				<box>
+					<topPen lineWidth="2.75" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RECIBI]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="363" width="310" height="21" uuid="db688b5b-cf9d-4e37-bf7a-ba4672076a5e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="420" y="530" width="111" height="31" uuid="98a50c11-b0d3-49a4-8914-1cabdcb36c95"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="270" y="500" width="265" height="31" uuid="3d681623-fe0c-4106-bddb-460c2f78774c"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Chilpancingo,Guerrero]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-2" y="570" width="544" height="1" uuid="8027db18-4d96-4957-8191-1754e1d30f97">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="580" width="141" height="21" uuid="b8b5dcaa-8a24-4471-b821-05be70cff800"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CCP. ARCHIVO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="60" width="541" height="127" uuid="b126f3eb-a29a-43bb-af66-1f3b273cbdb8"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Por medio de este conducto, manifiesto que recibo del programa FONDO SOLIDARIO DE AHORRO PARA EL RETIRO(FONSAR), la cantidad que se menciona en la parte inferior por concepto de Descuento Indebido del crédito que se menciona a continuación, recibiendo dicho monto a entera satisfacción.]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

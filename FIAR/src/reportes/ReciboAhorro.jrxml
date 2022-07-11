@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReciboAhorro" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="428e6a0b-e705-4373-984f-fd5711417a54">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Parameter2" class="java.lang.String"/>
+	<parameter name="Parameter3" class="java.lang.String"/>
+	<parameter name="Parameter5" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="Parameter4" class="java.lang.String"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<parameter name="Parameter6" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="40" width="211" height="31" uuid="4fda7f98-9d2b-4d33-9d7b-256c2819d1f7"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[RECIBO RETIRO: FIAR]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="11" width="111" height="60" uuid="f0c2f025-ba00-42b5-9657-0087424da6c8"/>
+				<imageExpression><![CDATA["Fiarlogo.JPG"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="440" y="40" width="100" height="31" uuid="1cfca135-1eaf-4c60-9479-2f981c5812b9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Parameter6}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="614" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="21" width="551" height="71" uuid="85e79b60-7530-4a4f-b30d-5230340c3ea0"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["POR MEDIO DE ESTE CONDUCTO MANIFIESTO QUE RETIRO DE MANERA VOLUNTARIA DEL PROGRAMA DE FONDO DE INVERSION(FIAR),PATRIMONIO DE LOS TRABAJADORES AFILIADOS AL MISMO UN MONTO DE : " + $P{Parameter3} + "  COMO PARCIALIDAD DE MI AHORRO, INCLUYENDO INTERESES, RECIBIENDOLO A MI ENTERA SATISFACCION"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="110" width="101" height="21" uuid="6461d137-d158-4f0f-b5d2-400b3412256d"/>
+				<text><![CDATA[CONCEPTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="150" width="191" height="21" uuid="83c390a2-11a4-45ca-8bc2-18b7d91a2ee6"/>
+				<text><![CDATA[CANTIDAD AHORRADA TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="180" width="191" height="21" uuid="e473a9d5-71bb-4106-b8c7-bff866fd1db0"/>
+				<text><![CDATA[TOTAL RETIROS ANTERIORES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="212" width="191" height="21" uuid="8e2766b2-7283-40ce-879c-30436884faf1"/>
+				<text><![CDATA[ULTIMO RETIRO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="250" width="191" height="21" uuid="d44f3195-0810-45b9-bb6a-e616ced90587"/>
+				<text><![CDATA[SALDO A LA FECHA]]></text>
+			</staticText>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="310" y="150" width="100" height="21" uuid="3a0c0a92-217e-4b01-9ecc-45596255c630"/>
+				<textFieldExpression><![CDATA[Double.valueOf($P{Parameter1})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="310" y="250" width="100" height="21" uuid="dd93bfe4-b2be-4c76-857f-2b4cf9ff3bad"/>
+				<textFieldExpression><![CDATA[Double.valueOf($P{Parameter4})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="310" y="212" width="100" height="21" uuid="96cc3622-a92f-44f5-9882-9793903c316c"/>
+				<textFieldExpression><![CDATA[Double.valueOf($P{Parameter3})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="310" y="180" width="100" height="21" uuid="defd9c1f-2360-47d7-9327-8f28d1ee6834"/>
+				<textFieldExpression><![CDATA[Double.valueOf($P{Parameter2})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="111" width="101" height="21" uuid="6353300d-a258-40c8-9ebe-7727f76790e8"/>
+				<text><![CDATA[IMPORTE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="466" width="264" height="30" uuid="a9536d39-4f4d-445f-98c1-2b884b32033b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Parameter5}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="135" y="509" width="270" height="1" uuid="8e282a52-0b97-4c8f-90c7-e6b9d377e6f4">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="240" y="520" width="70" height="21" uuid="9a0471d4-dd6b-40b3-a240-13a31e84b6c5"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[RECIBÍ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="537" width="131" height="21" uuid="4c883213-99ab-4d2a-a86e-1c5a7fa883c0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CCP PARA ARCHIVO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="572" width="51" height="21" uuid="9df90405-3c64-443d-ba46-bf699dcba047"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="440" y="541" width="121" height="31" uuid="ad5191b1-3241-413f-aa70-7a09205b0ee4"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

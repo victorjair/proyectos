@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Estadisticas" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d361968d-9a5d-445c-a849-c6f5067b9e89">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="fiar"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="0a3a6f5d-64ac-4eba-93ef-b064f53fa4a8">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="fiar"/>
+		<parameter name="Parameter1" class="java.lang.String"/>
+		<parameter name="Parameter2" class="java.lang.String"/>
+		<parameter name="Parameter3" class="java.lang.String"/>
+		<parameter name="Parameter4" class="java.lang.String"/>
+		<parameter name="Parameter5" class="java.lang.String"/>
+		<parameter name="Parameter6" class="java.lang.String"/>
+		<parameter name="Parameter7" class="java.lang.String"/>
+		<parameter name="Parameter8" class="java.lang.String"/>
+		<parameter name="Parameter9" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT 
+(SELECT SUM(ABONO) FROM qnarecuperacionrecuperada WHERE numeroquincena = A.numeroquincena   AND movimiento IN ('D') ) AS RECUPERACION,
+ (SELECT sum(round(abono* (select (interes/total)  from prestamos where folio = qnarecuperacionrecuperada.folio ),2))
+ from qnarecuperacionrecuperada where  numeroquincena  = A.numeroquincena     and movimiento in ('D'))AS INTERES,
+(SELECT sum(round(abono- abono* (select (interes/total)  from prestamos where folio = qnarecuperacionrecuperada.folio ),2))
+ from qnarecuperacionrecuperada where  numeroquincena  = A.numeroquincena     and movimiento in ('D'))AS CAPITAL,
+(SELECT COUNT(rfc) FROM afiliado WHERE QNAAFILIACION <= A.numeroquincena    )AS AFILIADOS,
+(SELECT COUNT(rfc) FROM afiliado WHERE QNAAFILIACION = A.numeroquincena    )AS INCREMENTO,
+(SELECT COUNT(rfc) FROM afiliado WHERE QNABAJA = A.numeroquincena    )AS BAJAS,
+(SELECT ifnull(SUM(monto),0) FROM prestamos WHERE QNA = A.numeroquincena AND STATUS NOT IN ('C','c')    )AS PRESTAMOS,
+ifnull(SUM(importe),0)AS APORTACION,A.numeroquincena as NUMEROQUINCENA FROM qnaahorrorecuperada A  WHERE A.numeroquincena  >= $P{Parameter8}  and A.numeroquincena <=  $P{Parameter9}  AND LITERAL IN ('CIP','CII') GROUP BY A.numeroquincena]]>
+		</queryString>
+		<field name="RECUPERACION" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="RECUPERACION"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="INTERES" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="INTERES"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CAPITAL" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="CAPITAL"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="AFILIADOS" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="AFILIADOS"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="INCREMENTO" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="INCREMENTO"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="BAJAS" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="BAJAS"/>
+		</field>
+		<field name="PRESTAMOS" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="PRESTAMOS"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="APORTACION" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="APORTACION"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="NUMEROQUINCENA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="NUMEROQUINCENA"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="Parameter2" class="java.lang.String"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select  * from qnaahorrorecuperada limit 1]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="rfc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="rfc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="plantel" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="plantel"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="facore" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="facore"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="importe" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="importe"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="numeroquincena" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numeroquincena"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="literal" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="literal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="cheque" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cheque"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="transferencia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="transferencia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="tiporetiro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tiporetiro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="numeroempleado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numeroempleado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="fechamodificacion" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="fechamodificacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<field name="usuariomovimiento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuariomovimiento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qnaahorrorecuperada"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="11" width="331" height="21" uuid="3ce80283-e5e1-499b-9263-094eefefb69c"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADISTICAS]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="580" y="10" width="150" height="21" uuid="ac5fa276-c1fa-4b92-95c2-c6e5b8529010"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="393" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="10" width="750" height="60" uuid="64b186d0-5243-4b74-ba48-09a8d4fc272b">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="a0ce6a6c-1a39-475a-b4d6-d4c01f69a9e6">
+						<datasetParameter name="Parameter8">
+							<datasetParameterExpression><![CDATA[$P{Parameter1}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Parameter9">
+							<datasetParameterExpression><![CDATA[$P{Parameter2}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="91" uuid="31111647-a7c6-4dae-a7b8-75839f6f4dba">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="91" height="30" uuid="f0999f61-248e-448c-9c68-32720965e1ad"/>
+								<text><![CDATA[RECUPERACION]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField pattern="#,##0.###;(#,##0.###-)" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="91" height="30" uuid="dc9f2764-9b18-4f6b-952d-0eb360ad3a50"/>
+								<textFieldExpression><![CDATA[$F{RECUPERACION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="91" uuid="d760c861-62d7-49e7-9278-832822b133cc">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="91" height="30" uuid="141e8055-6da6-46b2-90c0-b670326f63b3"/>
+								<text><![CDATA[CAPITAL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField pattern="#,##0.###;(#,##0.###-)">
+								<reportElement x="0" y="0" width="91" height="30" uuid="dad07207-1be5-449a-942c-c79a8f58fc4c"/>
+								<textFieldExpression><![CDATA[$F{CAPITAL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="91" uuid="5217e564-2a48-48a7-bbcc-b28b152140a4">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="91" height="30" uuid="92b3c133-a3b0-48cd-962f-94f815490e5d"/>
+								<text><![CDATA[INTERES]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField pattern="#,##0.###;(#,##0.###-)">
+								<reportElement x="0" y="0" width="91" height="30" uuid="269ee1b1-cce1-4bf9-abc5-ae9add9c3b48"/>
+								<textFieldExpression><![CDATA[$F{INTERES}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="67" uuid="8fb1b851-5218-4d4a-b1ad-51e49e446ed6">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="67" height="30" uuid="1039bf2a-f23a-40b1-acbe-223a8ba6117c"/>
+								<text><![CDATA[AFILIADOS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="67" height="30" uuid="c8655287-63b2-4722-ad3d-c5772a158310"/>
+								<textFieldExpression><![CDATA[$F{AFILIADOS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="e8d3bda3-430b-4e53-a337-68d5ec67ef2d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="59b892e1-e16e-42ec-be06-236ab3e8ce66"/>
+								<text><![CDATA[BAJAS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="30" uuid="19d3bda7-9e26-49b6-837a-16161faa5f57"/>
+								<textFieldExpression><![CDATA[$F{BAJAS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="0d347de7-351a-44d0-b07f-0a8c08d88df8">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="6fe353db-d5ae-43dc-8ad1-62813d343e64"/>
+								<text><![CDATA[INCREMENTO]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="5dd70d57-4d98-4ee4-9bae-dbb516051c9b"/>
+								<textFieldExpression><![CDATA[$F{INCREMENTO}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="91" uuid="62c4d3d7-281c-4449-86b2-eb42ec6e7ae0">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="91" height="30" uuid="a53757af-b540-4e8a-879e-51161fef8573"/>
+								<text><![CDATA[PRESTAMOS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField pattern="#,##0.###;(#,##0.###-)">
+								<reportElement x="0" y="0" width="91" height="30" uuid="69f684ae-88d9-451c-a100-8cfac7f778ac"/>
+								<textFieldExpression><![CDATA[$F{PRESTAMOS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="91" uuid="489cd976-cc62-41d3-aca6-572ef26ca438">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="91" height="30" uuid="632e16c2-fa64-4e91-9c39-2ef66ff2cf6e"/>
+								<text><![CDATA[APORTACION]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField pattern="#,##0.###;(#,##0.###-)">
+								<reportElement x="0" y="0" width="91" height="30" uuid="5355838c-52f6-41b3-b291-4a1e1f57c6e6"/>
+								<textFieldExpression><![CDATA[$F{APORTACION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="68" uuid="e38f9de5-0d5e-4151-896c-8eb5ed404d79">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="68" height="30" uuid="30064882-f039-4d3d-8e85-f28bbfe08602"/>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField pattern="#,##0.###;(#,##0.###-)">
+								<reportElement x="0" y="0" width="68" height="30" uuid="04818741-0979-4196-bbc9-b04a12629aac"/>
+								<textFieldExpression><![CDATA[($F{RECUPERACION}) == null ?  $F{APORTACION} : $F{RECUPERACION} + $F{APORTACION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="16c9bb3a-3854-4774-babc-bec9a0f84d17">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column10"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="f1bc2da9-483e-4f57-a594-040a489fd7cf"/>
+								<text><![CDATA[NUMEROQUINCENA]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="e888891f-9a32-4e29-9a3f-65dbb4af5241"/>
+								<textFieldExpression><![CDATA[$F{NUMEROQUINCENA}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="640" y="5" width="91" height="21" uuid="01dbb377-9db7-4a24-ba3f-726c7ffbb532"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
